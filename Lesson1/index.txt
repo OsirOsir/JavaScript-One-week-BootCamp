@@ -1,0 +1,7 @@
+LESSON 1
+
+In this Lesson I have learnt that:
+==> Javascript is giving instructions to a computer
+==> Wrote JavaScript code
+==> Run our code using the console
+==> Syntax of JS  set of Rules for rightoing instructions in Programming Language 
