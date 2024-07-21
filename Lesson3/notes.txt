@@ -1,0 +1,7 @@
+In this Lesson:
+==> String = text
+==> Use strings and numbers together
+==> Three ways to create strings
+    '...'  "..."  `...`(template strings)
+==> Escape characters: \' \n
+==> Interpolation, multi-line strings using template strings
