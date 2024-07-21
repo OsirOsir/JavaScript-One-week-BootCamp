@@ -1,0 +1,13 @@
+In this Lesson I have learnt:
+
+==> Numbers and Math
+
+==> Order of Operations, and Brackets (..)
+
+==> Calculated the numbers of final Project
+
+==> Calculations using floats  can be inaccurate
+
+==> Math.round()
+
+==> How to search for code on our own 
