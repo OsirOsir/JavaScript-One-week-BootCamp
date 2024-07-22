@@ -1,0 +1,5 @@
+In this lesson:
+==> Functions = let us reuse code
+==> Return = get value out of a Function
+==> Parametters = put values into functions
+==> Improved the code for Rock, Paper, Scissors
