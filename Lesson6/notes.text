@@ -1,0 +1,9 @@
+In this Lesson I have learnt:
+
+==> Booleans values (true, false);
+==> If-statements
+==> Comparison Operators (>,<, >=,<=, ===, !==)
+  logical Operators (&&, ||, !)
+==> Algorithms, and created Rock Paper Scissors
+==> Truthy and Falsy values
+==> Shotcuts for if-statements (ternary, guard, default)
