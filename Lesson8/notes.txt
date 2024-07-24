@@ -1,0 +1,6 @@
+In this Lesson :
+===> Objects = group related values together
+===> added a score to rock paper scissors
+===> Built in Objects(JSON & LocalStorage)
+===> More Details (null, auto-boxing, references)
+===> Shortcuts (destructuring, shorthand property, shorthand method)
