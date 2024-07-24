@@ -18,25 +18,10 @@
   
   <button onclick=" updateCartQuantity('+5')">+5</button>
   
-  <button onclick=" 
-  if (cartQuantity - 2 < 0) {
-    alert('Not Enough Items in the Cart');
-  } else {
-    cartQuantity -= 2;
-    console.log(`Cart Quantity: ${cartQuantity}`)
-  }
-  ">-2</button>
-  <button onclick=" 
-  if (cartQuantity - 3 < 0) {
-    
-    alert('Not Enough Items in the Cart');
-  } else {
-    cartQuantity -= 3;
-    console.log(`Cart Quantity: ${cartQuantity}`)
-  }
-  ">-3</button>
-  <button onclick=" cartQuantity--; console.log(`${cartQuantity} Remaining`)">Remove from Cart</button>
-  <button onclick="cartQuantity = 0; console.log(`Cart was reset.\nCart Quantity: ${cartQuantity}`)">Reset Cart</button>
+  <button onclick=" updateCartQuantity('-2')">-2</button>
+  <button onclick=" updateCartQuantity('-3')">-3</button>
+  <button onclick=" updateCartQuantity('Remove from Cart')">Remove from Cart</button>
+  <button onclick=" updateCartQuantity('Reset Cart')">Reset Cart</button>
 <script>
   let cartQuantity = 0;
   function updateCartQuantity(keyPress) {
@@ -77,6 +62,30 @@
         cartQuantity += 5;
         console.log(`Cart Quantity: ${cartQuantity}`);
       } 
+    } else if(keyPress === '-2') {
+      if(cartQuantity - 2 < 0) {
+        alert('Not Enough Items In Cart')
+      } else{
+        cartQuantity -= 2;
+        console.log(`Cart Quantity: ${cartQuantity}`)
+      }
+    } else if(keyPress === '-3') {
+      if(cartQuantity - 3 < 0) {
+        alert('Not Enough Items In Cart')
+      } else{
+        cartQuantity -= 3;
+        console.log(`Cart Quantity: ${cartQuantity}`)
+      }
+    } else if(keyPress === 'Remove from Cart') {
+      if(cartQuantity - 1 < 0) {
+        alert('Not Enough Items In Cart')
+      } else{
+        cartQuantity--;
+        console.log(`${cartQuantity} Items Remaining`)
+      }
+    } else if(keyPress === 'Reset Cart') {
+     cartQuantity = 0;
+     console.log(`Cart Reset\nCart Quantity: ${cartQuantity}`)
     }
   }
 
