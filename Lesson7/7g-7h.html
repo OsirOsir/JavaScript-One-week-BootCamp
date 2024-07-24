@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>7g-7h</title>
+</head>
+<body>
+  <script>
+    function convertLength(length, from, to,) {
+      if (from !== 'miles' && to !== 'km') {
+        return `Invalid units:${to}`;
+      } else if (from !== 'km' && to !== 'miles') {
+        return `Invalid units: ${to}`;
+      }
+      if (from === 'miles' && to === 'km') {
+        return `${length * 1.6} km`;
+      } else if(from === 'km' && to === 'miles') {
+        return `${length / 1.6} miles`;
+      }else if(from === 'km' && to === 'ft') {
+        return `${length * 3281} ft`;
+      } else if (from === 'miles' && to === 'ft') {
+        return `${length * 5284} ft`;
+      }
+    }
+
+    console.log(convertLength(5, 'km', 'lb'));
+    // console.log(convertLength(5, 'km', 'miles'));
+  </script>
+</body>
+</html>

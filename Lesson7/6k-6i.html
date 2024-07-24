@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>variableProject</title>
+</head>
+<body>
+  <p >Cart Quantity </p>
+  <button onclick="updateCartQuantity('Show Quantity')">Show Quantity</button>
+  <button onclick="updateCartQuantity('Add to Cart')">Add to Cart </button>
+
+  <button onclick=" updateCartQuantity('+2')">+2</button>
+
+  <button onclick=" updateCartQuantity('+3')">+3</button>
+
+  <button onclick=" updateCartQuantity('+4')">+4</button>
+  
+  <button onclick=" updateCartQuantity('+5')">+5</button>
+  
+  <button onclick=" 
+  if (cartQuantity - 2 < 0) {
+    alert('Not Enough Items in the Cart');
+  } else {
+    cartQuantity -= 2;
+    console.log(`Cart Quantity: ${cartQuantity}`)
+  }
+  ">-2</button>
+  <button onclick=" 
+  if (cartQuantity - 3 < 0) {
+    
+    alert('Not Enough Items in the Cart');
+  } else {
+    cartQuantity -= 3;
+    console.log(`Cart Quantity: ${cartQuantity}`)
+  }
+  ">-3</button>
+  <button onclick=" cartQuantity--; console.log(`${cartQuantity} Remaining`)">Remove from Cart</button>
+  <button onclick="cartQuantity = 0; console.log(`Cart was reset.\nCart Quantity: ${cartQuantity}`)">Reset Cart</button>
+<script>
+  let cartQuantity = 0;
+  function updateCartQuantity(keyPress) {
+    if (keyPress === 'Show Quantity') {
+      console.log(`Cart Quantity: ${cartQuantity}`)
+    } else if (keyPress === 'Add to Cart') {
+      if (cartQuantity + 1 > 10){
+        alert('Cart Full');
+      } else{
+        cartQuantity++;
+        console.log(`Cart Quantity: ${cartQuantity}`);
+      }
+    } else if(keyPress === "+2") {
+      if(cartQuantity + 2 > 10){
+        alert('Cart Full')
+      } else {
+        cartQuantity += 2;
+        console.log(`Cart Quantity: ${cartQuantity}`);
+      }
+    } else if(keyPress === '+3') {
+      if(cartQuantity + 3 > 10) {
+        alert('Cart Full')
+      } else {
+        cartQuantity += 3;
+        console.log(`Cart Quantity: ${cartQuantity}`);
+      }
+    } else if(keyPress === '+4') {
+      if(cartQuantity + 4 > 10) {
+        alert('Cart Full')
+      } else {
+        cartQuantity += 4;
+        console.log(`Cart Quantity: ${cartQuantity}`);
+      } 
+    } else if(keyPress === '+5') {
+      if(cartQuantity + 5 > 10) {
+        alert('Cart Full')
+      } else {
+        cartQuantity += 5;
+        console.log(`Cart Quantity: ${cartQuantity}`);
+      } 
+    }
+  }
+
+</script>
+</body>
+</html>
