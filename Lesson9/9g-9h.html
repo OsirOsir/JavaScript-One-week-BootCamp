@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>9g</title>
+</head>
+<body>
+  <input onkeydown="if (event.key === 'Enter'){calculateCost()}" class="inputField" type="number" name="number" placeholder="Cost">
+  <button class="calculateBtn" onclick="calculateCost()">Calculate</button>
+  <p class="displayField"></p>
+
+
+  <script>
+    function calculateCost() {
+      const costInputValue = document.querySelector('.inputField').value;
+      let cost = Number(costInputValue);
+
+      if (cost < 40 ){
+        cost = (cost + 10).toFixed(2);
+        document.querySelector('.displayField').innerHTML = `$${cost}`
+      } else{
+       document.querySelector('.displayField').innerHTML = `$${cost}`
+      }
+    }
+  </script>
+</body>
+</html>
