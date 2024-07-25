@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>6f-6j</title>
+</head>
+
+<body>
+  <button onclick="playGame('Heads')">heads</button>
+  <button onclick="playGame('Tails')">tails</button>
+  <button onclick="score = { Wins: 0, Losses:0 }; clearGame()">Clear</button>
+  <script>
+    // let score = {
+    //   Wins: 0,
+    //   Losses: 0
+    // }
+    
+    let score = JSON.parse(localStorage.getItem("score")) || {Wins: 0, Losses:0};
+
+    function playGame(guess) {
+      const randomNumber = Math.random();
+      result = ''
+      if (randomNumber > 0.5) {
+        result = "Tails"
+      } else {
+        result = 'Heads'
+      }
+      
+      if (result === guess) {
+        score.Wins++;
+        alert(`You Choose ${guess} You Win! The coin landed on ${result}\n Wins: ${score.Wins}, Losses: ${score.Losses}`);
+      } else {
+        score.Losses++;
+        alert(`You Choose ${guess} You Lost! The coin landed on ${result}\n Wins: ${score.Wins}, Losses: ${score.Losses}`);
+      }
+      localStorage.setItem("score", JSON.stringify(score))
+    }
+
+    function clearGame() {
+      localStorage.removeItem("score");
+    }
+    // const randomNumber = Math.random();
+    // let result = '';
+    // const guess = 'tail'
+    // const flipedCoin = randomNumber < 0.5 ? "heads" : "tail";
+    // result = flipedCoin;
+    // const message = guess === result? "You win" : "You lose";
+    // console.log(message)
+    // if (guess === result) {
+    //   console.log("You win")
+    // } else {
+    //   console.log("You lose!")
+    // }
+
+  </script>
+</body>
+
+</html>

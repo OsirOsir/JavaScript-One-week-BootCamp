@@ -32,9 +32,9 @@
   </p>
   <button onclick=" clearCalculation('clear');">clear</button>
 <script>
-  let calculation = "";
+  // let calculation = "";
   calculation = localStorage.getItem("math") || '';
-  
+
   function calculate(keyPress) {
     if (keyPress === '=') {
       console.log(eval(calculation))
