@@ -1,0 +1,7 @@
+In this Lesson 
+==> Document Object Model 
+==> document.querySelector(...)
+==> .innerHTML
+==> 3 projects using the DOM
+==> onkeydown = ""
+more details about strings + window onject

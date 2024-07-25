@@ -10,6 +10,12 @@
 <body>
   <p>YouTube Subscribe Button</p>
   <button class="js-subscribe-button" onclick="toggleSubscribeBtn()">Subscribe</button>
+  <p>Amazon Shipping Calculator</p>
+  <p>Orders under $40 = +$10 shipping.</p>
+  <p>Orders over $40 = FREE shipping</p>
+  <input class ="numInput" type="number" name="number" >
+  <button class="calculateButton" onclick="getInput()">Calculate</button>
+  <p class="calculatedFee"></p>
   <script>
     function toggleSubscribeBtn() {
       const buttonElement = document.querySelector('.js-subscribe-button');
