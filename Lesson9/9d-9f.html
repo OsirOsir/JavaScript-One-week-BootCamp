@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>9d-9f</title>
+</head>
+<body>
+  <input onkeydown="handlesKeyEvents(event)" type="text" name="name" id="name" placeholder="Name">
+  <button onclick=" displayName()" >Submit</button>
+  <p class="myName"></p>
+
+  <script>
+    function handlesKeyEvents(event) {
+      if (event.key === "Enter"){
+        displayName()
+      }
+    }
+    function displayName() {
+      const nameValue = document.getElementById("name").value;
+      return document.querySelector('.myName').innerHTML = `Your name is: ${nameValue}`;
+    }
+  </script>
+</body>
+</html>
