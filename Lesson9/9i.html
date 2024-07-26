@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <button onclick="quantityMenu.innerHTML = `Cart quantity: ${cartQuantity}`">Show Quantity</button>
+  <button onclick="quantyCalculator(1) ">Add to Cart</button>
+  <button onclick="quantyCalculator(2)">+2</button>
+  <button onclick="quantyCalculator(3)">+3</button>
+  <button onclick="quantyCalculator(4)">+4</button>
+  <button onclick="quantyCalculator(5)">+5</button>
+  <button onclick="quantyCalculator(-1)">Remove from cart</button>
+  <button onclick="quantyCalculator(-2)">-2</button>
+  <button onclick="quantyCalculator(-3)">-3</button>
+  <button onclick="localStorage.removeItem('storedCalc'); cartQuantity = 0;">Reset</button>
+  <p class="quantityMenu">Cart quantity:</p>
+
+
+  <script>
+    const quantityMenu = document.querySelector('.quantityMenu');
+    let cartQuantity = 0;
+
+    function getItem() {
+     let cartQuantity = parseInt(localStorage.getItem('storedCalc')) || '';
+     quantityMenu.innerHTML = `Cart quantity: ${cartQuantity}`;
+    // console.log(finalcartQuantity)
+    }
+    function quantyCalculator(keyPress) {
+      let newCartQuantity = cartQuantity + keyPress;
+      if (newCartQuantity > 10 ) {
+        quantityMenu.innerHTML = "Cart quantity: Cart Full"
+      } else if (newCartQuantity < 0 ) {
+        quantityMenu.innerHTML = "Cart quantity: Not enough Items in Cart"
+      } else {
+        cartQuantity = newCartQuantity;
+        quantityMenu.innerHTML = `Cart quantity: ${cartQuantity}`;
+        localStorage.setItem('storedCalc', (cartQuantity));
+      }
+    }
+    getItem()
+  </script>
+</body>
+</html>
