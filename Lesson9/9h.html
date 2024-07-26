@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>9h</title>
+</head>
+<body>
+  <input  class="myInput" type="text" placeholder="Type here" onkeyup=" 
+    typeAlong(event);
+    // getItems()
+    ">
+    <p class="textOnPage"></p>
+    <button  onclick="localStorage.removeItem('keyPress')" >clear</button>
+  <script>
+    // function typeAlong(event){
+    //   const input = document.querySelector('.myInput').value;
+    //   localStorage.setItem('keysSaved', input);
+    //   const currentKey = localStorage.getItem('keysSaved')
+    //   const keys = document.querySelector('.textOnPage').innerText = event.key + currentKey;
+    // }
+
+    function getItem() {
+      const finalKey = localStorage.getItem('keyPress') || '';
+      const myParagraph = document.querySelector('.textOnPage').innerHTML = finalKey;
+
+    }
+
+    function typeAlong(event) {
+      const input = document.querySelector('.myInput').value;
+
+      const savedKeys = localStorage.getItem('keyPress') || '';
+      const newKeys =  savedKeys + event.key;
+
+      localStorage.setItem('keyPress', newKeys);
+      getItem()
+    }
+
+    // getItem()
+  </script>
+</body>
+</html>
